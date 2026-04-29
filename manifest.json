@@ -1,0 +1,9 @@
+{
+    "name": "Worldbook Transparent",
+    "display_name": "世界书透明美化",
+    "version": "1.0.0",
+    "author": "你",
+    "description": "世界书搜索框、下拉菜单、X号透明毛玻璃美化，自动适配主题",
+    "type": "extension",
+    "css": "style.css"
+}
