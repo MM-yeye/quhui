@@ -1,0 +1,438 @@
+/* ===== 世界书区域 - 半透明白底（无模糊）===== */
+
+/* 整个选择器容器 - 透明 */
+.select2,
+.select2-container,
+.select2-container--default {
+    background: transparent !important;
+}
+
+/* ===== 上面部分（搜索框区域）===== */
+
+/* 搜索框容器 - 完全透明无边框 */
+.select2-selection--single {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 搜索框内部文字 */
+.select2-selection--single .select2-selection__rendered {
+    color: var(--SmartThemeBodyColor) !important;
+    background: transparent !important;
+    line-height: normal !important;
+}
+
+/* 下拉箭头 - 透明，只留颜色 */
+.select2-selection--single .select2-selection__arrow {
+    background: transparent !important;
+}
+
+.select2-selection--single .select2-selection__arrow b {
+    border-color: var(--SmartThemeBodyColor) transparent transparent transparent !important;
+}
+
+/* 多选容器 - 透明无边框 */
+.select2-selection--multiple {
+    background: transparent !important;
+    border: none !important;
+    padding: 4px !important;
+}
+
+/* 已选条目容器 - 透明无边框，只有文字 */
+.select2-selection__choice {
+    background: transparent !important;
+    border: none !important;
+    padding: 2px 4px !important;
+    margin: 2px !important;
+}
+
+/* 条目文字 - 跟随主题颜色 */
+.select2-selection__choice__display {
+    color: var(--SmartThemeBodyColor) !important;
+}
+
+/* ===== X号按钮 ===== */
+
+.select2-selection__choice__remove {
+    background: rgba(255, 255, 255, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: 6px !important;
+    color: var(--SmartThemeBodyColor) !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    padding: 0 8px !important;
+    margin-right: 6px !important;
+    transition: all 0.2s ease !important;
+    display: inline-block !important;
+    line-height: 1.4 !important;
+}
+
+.select2-selection__choice__remove:hover {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.7) !important;
+    transform: scale(1.05) !important;
+}
+
+/* ===== 下面部分（下拉菜单）- 更白、更不透 ===== */
+
+/* 下拉菜单 - 白底，不透明 */
+.select2-dropdown {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 搜索输入框 */
+.select2-search__field {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(200, 200, 200, 0.5) !important;
+    border-radius: 8px !important;
+    color: var(--SmartThemeBodyColor) !important;
+    padding: 8px 12px !important;
+    outline: none !important;
+}
+
+.select2-search__field:focus {
+    border-color: rgba(0, 122, 255, 0.5) !important;
+    background: #ffffff !important;
+}
+
+/* 搜索框容器 */
+.select2-search--dropdown {
+    background: transparent !important;
+    padding: 10px !important;
+}
+
+/* 下拉选项 */
+.select2-results__option {
+    background: transparent !important;
+    color: var(--SmartThemeBodyColor) !important;
+    padding: 8px 12px 8px 28px !important;
+    margin: 2px 6px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.15s ease !important;
+}
+
+/* 选项悬停 */
+.select2-results__option--highlighted {
+    background: rgba(0, 0, 0, 0.05) !important;
+    color: var(--SmartThemeBodyColor) !important;
+}
+
+/* 选中状态 */
+.select2-results__option[aria-selected="true"] {
+    background: rgba(0, 0, 0, 0.03) !important;
+    font-weight: bold !important;
+}
+
+/* =========================================
+   全局隐藏滚动条（无论什么主题都生效）
+   ========================================= */
+
+/* 隐藏所有滚动条 - Chrome/Safari/Edge */
+::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* 隐藏滚动条 - Firefox */
+* {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+
+/* =========================================
+   AI人设生成器插件 - 防黑底黑字（通用保底样式）
+   ========================================= */
+
+.ai-panel,
+.ai-panel .tab-content,
+.ai-panel .field input,
+.ai-panel .field textarea,
+.ai-panel .field select,
+.ai-panel .result-text,
+#apg-api-url,
+#apg-api-key,
+#apg-api-model,
+.ai-panel .primary-btn,
+.ai-panel .copy-btn,
+.ai-panel .save-tpl-btn,
+.ai-panel .menu_button,
+.ai-panel .template-card,
+.ai-panel .custom-page-form,
+.ai-panel .custom-page-list,
+.ai-panel .list-container,
+.ai-panel .char-item,
+.ai-panel .history-item,
+.ai-panel .template-item,
+.ai-panel .chapter-card,
+.ai-panel .chapter-title,
+.ai-panel .chapter-content-textarea,
+.ai-panel .novel-title-display,
+.ai-panel .custom-submode-row input,
+.ai-panel .custom-input-row input,
+.ai-panel .custom-input-row select {
+    background: var(--SmartThemeBlurTintColor, rgba(255,255,255,0.9)) !important;
+    background-color: var(--SmartThemeBlurTintColor, rgba(255,255,255,0.9)) !important;
+    color: var(--SmartThemeBodyColor, #333) !important;
+    border-color: var(--SmartThemeBorderColor, #ddd) !important;
+}
+
+.ai-panel .field input,
+.ai-panel .field textarea,
+.ai-panel .field select,
+.ai-panel .result-text,
+#apg-api-url,
+#apg-api-key,
+#apg-api-model,
+.ai-panel .custom-submode-row input,
+.ai-panel .custom-input-row input,
+.ai-panel .custom-input-row select,
+.ai-panel .chapter-content-textarea {
+    background: var(--SmartThemeInputBackground, #fff) !important;
+}
+
+.ai-panel .primary-btn,
+.ai-panel .copy-btn,
+.ai-panel .save-tpl-btn {
+    background: var(--SmartThemeQuoteColor, #4A6FA5) !important;
+    color: white !important;
+}
+
+.ai-panel .menu_button,
+.ai-panel .tab-btn {
+    background: var(--SmartThemeBlurTintColor, #f0f0f0) !important;
+    color: var(--SmartThemeBodyColor, #333) !important;
+}
+
+.ai-panel .tab-btn.active {
+    background: var(--SmartThemeBlurTintColor, #fff) !important;
+    border-color: var(--SmartThemeBorderColor, #ddd) !important;
+}
+
+.ai-panel .result-text {
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.ai-panel .delete-page-btn,
+.ai-panel .remove-submode-row,
+.ai-panel .remove-input-row {
+    background: #d32f2f !important;
+    color: white !important;
+}
+
+/* =========================================
+   头像/名称切换器 - 防黑底黑字保底样式
+   ========================================= */
+
+.avs-overlay {
+    background: rgba(0, 0, 0, 0.3) !important;
+}
+
+.avs-box {
+    background: var(--SmartThemeBlurTintColor, rgba(255,255,255,0.95)) !important;
+    background-color: var(--SmartThemeBlurTintColor, rgba(255,255,255,0.95)) !important;
+    color: var(--SmartThemeBodyColor, #333) !important;
+    border-color: var(--SmartThemeBorderColor, #ddd) !important;
+}
+
+.avs-input,
+.avs-select,
+select.avs-input,
+input.avs-input {
+    background: var(--SmartThemeInputBackground, #fff) !important;
+    background-color: var(--SmartThemeInputBackground, #fff) !important;
+    color: var(--SmartThemeBodyColor, #333) !important;
+    border: 1px solid var(--SmartThemeBorderColor, #ccc) !important;
+}
+
+.avs-btn {
+    background: var(--SmartThemeQuoteColor, #4a79ff) !important;
+    color: white !important;
+}
+
+/* =========================================
+   世界书&正则选择器 - 防黑底黑字（通用保底样式）
+   ========================================= */
+
+#global-combined-selector-panel,
+#global-combined-selector-panel .panel-header,
+#global-combined-selector-panel .tab-container,
+#global-combined-selector-panel .tab-content,
+#global-combined-selector-panel .content-container,
+#global-combined-selector-panel .search-container,
+#global-combined-selector-panel .list-container,
+#global-combined-selector-panel .regex-section-title,
+#global-combined-selector-panel .lorebook-section-title,
+#global-combined-selector-panel .regex-item,
+#global-combined-selector-panel .lorebook-item,
+.global-regex-item,
+.global-lorebook-item {
+    background: var(--SmartThemeBlurTintColor, rgba(255,255,255,0.95)) !important;
+    background-color: var(--SmartThemeBlurTintColor, rgba(255,255,255,0.95)) !important;
+    color: var(--SmartThemeBodyColor, #333) !important;
+    border-color: var(--SmartThemeBorderColor, #ddd) !important;
+}
+
+#global-combined-selector-panel .search-input,
+#global-combined-selector-panel input.search-input,
+#global-combined-selector-panel .search-input:focus {
+    background: var(--SmartThemeInputBackground, #fff) !important;
+    background-color: var(--SmartThemeInputBackground, #fff) !important;
+    color: var(--SmartThemeBodyColor, #333) !important;
+    border: 1px solid var(--SmartThemeBorderColor, #ccc) !important;
+}
+
+#global-combined-selector-panel .search-input::placeholder {
+    color: var(--SmartThemeBodyColor, #999) !important;
+    opacity: 0.6 !important;
+}
+
+#global-combined-selector-panel .tab-button {
+    background: var(--SmartThemeBlurTintColor, #f0f0f0) !important;
+    color: var(--SmartThemeBodyColor, #333) !important;
+}
+
+#global-combined-selector-panel .tab-button.active-tab {
+    background: var(--SmartThemeBlurTintColor, #fff) !important;
+    color: var(--SmartThemeQuoteColor, #9a7ace) !important;
+    border-bottom-color: var(--SmartThemeQuoteColor, #9a7ace) !important;
+}
+
+#global-combined-selector-panel .close-button {
+    background: transparent !important;
+    color: var(--SmartThemeBodyColor, #666) !important;
+}
+
+#global-combined-selector-panel .close-button:hover {
+    color: var(--SmartThemeQuoteColor, #333) !important;
+}
+
+#global-combined-selector-panel .regex-item-name,
+#global-combined-selector-panel .lorebook-item-content {
+    color: var(--SmartThemeBodyColor, #333) !important;
+}
+
+#global-combined-selector-panel .regex-star-icon,
+#global-combined-selector-panel .lorebook-star-icon {
+    color: var(--SmartThemeQuoteColor, #ffcc33) !important;
+}
+
+#global-combined-selector-panel .regex-star-icon:hover,
+#global-combined-selector-panel .lorebook-star-icon:hover {
+    color: var(--SmartThemeQuoteColor, #ffd700) !important;
+}
+
+#global-combined-selector-panel .selected-global-lorebook {
+    background: var(--SmartThemeQuoteColor, #4a5d7e) !important;
+    color: var(--SmartThemeBodyColor, #fff) !important;
+}
+
+#global-combined-selector-panel .regex-item.disabled,
+#global-combined-selector-panel .global-regex-item.disabled {
+    opacity: 0.5 !important;
+    background: var(--SmartThemeBlurTintColor, #f5f5f5) !important;
+}
+
+#global-combined-selector-panel .regex-item.disabled .regex-item-name,
+#global-combined-selector-panel .global-regex-item.disabled .regex-item-name {
+    text-decoration: line-through !important;
+    color: var(--SmartThemeBodyColor, #999) !important;
+}
+
+/* 下拉菜单选项 - 白底黑字 */
+.select2-dropdown,
+.select2-container--default .select2-dropdown {
+    background: var(--SmartThemeInputBackground, #fff) !important;
+    background-color: var(--SmartThemeInputBackground, #fff) !important;
+    border-color: var(--SmartThemeBorderColor, #ddd) !important;
+}
+
+.select2-results__option {
+    background: transparent !important;
+    color: var(--SmartThemeBodyColor, #333) !important;
+}
+
+.select2-results__option--highlighted {
+    background: var(--SmartThemeBlurTintColor, #f0f0f0) !important;
+    color: var(--SmartThemeBodyColor, #333) !important;
+}
+
+.select2-search__field {
+    background: var(--SmartThemeInputBackground, #fff) !important;
+    color: var(--SmartThemeBodyColor, #333) !important;
+    border: 1px solid var(--SmartThemeBorderColor, #ddd) !important;
+}
+
+.select2-selection--single,
+.select2-selection--multiple {
+    background: var(--SmartThemeInputBackground, #fff) !important;
+    border-color: var(--SmartThemeBorderColor, #ddd) !important;
+}
+
+.select2-selection__rendered {
+    color: var(--SmartThemeBodyColor, #333) !important;
+}
+
+.select2-selection__choice {
+    background: var(--SmartThemeBlurTintColor, #f5f5f5) !important;
+    border-color: var(--SmartThemeBorderColor, #ddd) !important;
+    color: var(--SmartThemeBodyColor, #333) !important;
+}
+
+/* =========================================
+   模式选择单选框 - 纯圆圈阴影，无点无框线
+   ========================================= */
+
+.extend-checkboxes {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 8px 0;
+}
+
+.extend-checkboxes label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--SmartThemeBodyColor, #333);
+    background: none !important;
+    border: none !important;
+    padding: 4px 8px 4px 0;
+}
+
+.extend-checkboxes input[type="radio"] {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: none !important;
+    outline: none !important;
+    margin: 0 !important;
+    cursor: pointer;
+    flex-shrink: 0;
+    
+    /* 默认内阴影（凹陷）- 主题色 */
+    box-shadow: inset 0 2px 4px var(--SmartThemeQuoteColor, rgba(0,0,0,0.2)) !important;
+    transition: box-shadow 0.15s ease;
+}
+
+.extend-checkboxes input[type="radio"]:checked {
+    box-shadow: 0 2px 6px var(--SmartThemeQuoteColor, rgba(0,0,0,0.25)) !important;
+}
+
+.extend-checkboxes input[type="radio"]::before {
+    display: none !important;
+    content: none !important;
+  }
